@@ -1,23 +1,95 @@
+/* Umum */
 body {
-  background-color: #FFFFEO; /* Warna kuning cerah */
-font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah dibaca */
-color: #191970; /* Warna teks utama (Biru Gelap) */
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.kartu-profil {
-  width: 300px;
-  margin: 50px auto; /* 50px jarak atas/bawah, auto menengahkan kiri/kanan */
-padding: 20px;
-  background-color: white;
-  border-radius: 15px; /* Membuat sudut menjadi melengkung */
-box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
-  text-align: center; /* Menengahkan semua teks di dalam kartu */
- }
+.container {
+    display: flex;
+    min-height: 100vh;
+}
 
-.kartu-profil img {
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #4b7bec;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #3867d6;
+}
+
+/* Konten utama */
+.content {
+    margin-left: 240px;
+    padding: 30px;
+    width: 100%;
+}
+
+.content h1 {
+    color: #3867d6;
+    border-bottom: 2px solid #3867d6;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.content section {
+    margin-bottom: 40px;
+}
+
+.content img {
+    border-radius: 50%;
+    margin: 15px 0;
     width: 150px;
-    border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran sempurna */
+    height: 150px;
+    object-fit: cover;
 }
-.kartu-profil {
-  /* ... (kode dari slide sebelumnya) ... */
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
 }
